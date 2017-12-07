@@ -1,6 +1,56 @@
 ---
-title: "Major Causes of Flight Delay"
-author: "Yuqi Tu"
-date: "December 6, 2017"
+title: ""
 output: html_document
 ---
+
+### What are the main causes of delayed flights?
+
+Causes of Delay                                    | Counts
+---------------------------------------------------|--------------
+NAS                                                | 1,012,454
+Carrier and Late aircraft                          | 910,725
+Late aircraft                                      | 747,498	  
+Carrier                                            | 727,226
+Carrier, and NAS                                   | 649,942
+NAS and Late aircraft                              | 608,158
+Carrier, NAS, and Late aircraft                    | 573,158
+Weather, and NAS                                   | 86,566
+Weather, and Late aircraft                         | 70,939
+Weather, NAS, and Late aircraft                    | 70,321
+Weather                                            | 53,498
+Carrier, Weather, NAS, and Late aircraft           | 7,783
+NAS, and Security                                  | 5,668
+Carrier, Weather, and NAS                          | 5,625
+Carrier, Weather, and Late aircraft                | 5,429
+Carrier and Weather                                | 5,428
+Secuirty and Late aircraft                         | 4,456
+Secuity                                            | 3,562
+NAS, Security, and Late aircraft                   | 2,792
+Carrier and Security                               | 570
+Carrier, NAS, and Security                         | 360
+Carrier, Security, and Late aircraft               | 205
+Carrier, NAS, Security, and Late aircraft          | 155
+Weather and Security                               | 76
+Weather, NAS, and Security                         | 15
+Carrier, Weather, and Security                     | 12
+Weather, Security, and Late aircraft               | 12
+Carrier, Weather, Security, Late aircraft          | 5
+Carrier, Weather, NAS, Security, and Late aircraft | 1
+Carrier, Weather,NAS, Security                     | 1
+Weather, NAS, Security, and Late aircraft          | 1
+
+
+> **5 major** causes:
+        
+  * Carrier delay
+  * Weather delay 
+  * National System delay 
+  * Security delay 
+  * Late aircraft delay 
+
+
+> **31 combinations** of the major causes of flight delay
+
+
+how many delayed flight are caused by the combinations of different major causes. Originally, we did not anticipate that NAS delay is the largest cause. After reviewing extra articles, our result parallels with the article, ‘An Answer to Flight Delays?’ by Tracy Samantha. A significant reason for flight delays breakdowns within the National Aviation System (NAS), which includes airports and the air traffic control centers. Since the NAS delay includes issues at the air traffic control centers, the Flow control program, and other significant and complex factors, when the issues happened, a number of flight will be affected and might have delay.
+
