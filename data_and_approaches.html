@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -97,34 +97,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 45px;
+  padding-top: 51px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 
 .section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 </style>
 
@@ -180,17 +180,9 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown-header">Project Information</li>
 <li class="dropdown-header">Data and Approaches</li>
-<li>
-  <a href="Major_Causes_of_Flight_Delay.html">Major Causes of Flight Delay</a>
-</li>
+<li class="dropdown-header">Major Causes of Flight Delay</li>
 <li class="dropdown-header">Time Pattern of Flight Delay</li>
-<<<<<<< HEAD
-<li>
-  <a href="the_average_delay_time_per_delayed_flight_of_US_domestics_flights">Airline of Flight Delay</a>
-</li>
-=======
 <li class="dropdown-header">Airline of Flight Delay</li>
->>>>>>> 52dd2807c33a50598092e38ec699d1c948e8c551
 <li class="dropdown-header">Contact Us</li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -235,8 +227,29 @@ pre { /* Code block - determines code spacing between lines */
 </style>
 <div id="data" class="section level1">
 <h1>Data</h1>
-<p>       The database - “Airline On-Time Performance Data” used comes from Bureau of Transportation Statistics (BTS), which is a U.S. Department that tracks the on-time performance of domestic flights operated by large air carriers and details on the causes of flight delays.</p>
+<div id="source" class="section level3">
+<h3>Source</h3>
+<p>We used database “Airline On-Time Performance Data” coming from Bureau of Transportation Statistics (BTS), which has records of the on-time performance of domestic flights operated by large air carriers. The database is accessed from <a href="https://www.transtats.bts.gov/Fields.asp?Table_ID=236">here</a>.</p>
+</div>
+<div id="overview" class="section level3">
+<h3>Overview</h3>
+<p>We selected 23 out of 109 variables of our interest, and chose time ranges from 2012 Janurary to 2016 December. In total, there are 29722792 observations of 23 variables in our dataset. Each observation represent one flight. Variables fall into three categories based on variable types: <em>Indicator variables</em>, <em>Continuous variables</em>, <em>Categorical variables</em>, including summary information on the flights performance and descriptive information about flights.</p>
+</div>
+<div id="definition-of-flight-delay" class="section level3">
+<h3>Definition of flight delay</h3>
+<p>A flight is counted as “delayed” if it arrived 15min later than schedule arrival.</p>
+</div>
+<div id="causes-of-delay" class="section level3">
+<h3>5 Causes of delay</h3>
+<ul>
+<li>Carrier Delay: including Aircraft cleaning, Maintenance, Late crew, <em>etc.</em></li>
+<li>Weather Delay: including Below minimum conditions, Thunder Storm, Tornado <em>etc.</em></li>
+<li>National Air System Delay (<code>nas_delay</code>): including Air Traffic Control (ATC), Bird strikes, Closed Runways <em>etc.</em></li>
+<li>Security Delay: including Lines at screening area that exceed standard time, Bomb threat, Inoperative screening equipment - TSA <em>etc.</em></li>
+<li>Late Arriving Aircraft Delay (<code>late_aircraft_delay</code>) means a previous flight with the same aircraft arrived late which caused the present flight to depart late.</li>
+</ul>
 <hr />
+</div>
 </div>
 <div id="approaches" class="section level1">
 <h1>Approaches</h1>
