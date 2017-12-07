@@ -16,5 +16,4 @@ navbar:
     - text: "Contact Us"
       href: 
 output:
-  html_document:
-    theme: 
+  html_document
