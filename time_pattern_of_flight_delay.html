@@ -198,9 +198,20 @@ $(document).ready(function () {
 </div>
 
 
+<div id="month-of-year-view-average-delay" class="section level3">
+<h3>Month of Year View: Average delay</h3>
+<p><strong>Comments:</strong> From the graph through 5 years we know that the patterns among 2012-2016 are alike across months and types of delay causes. Each year, it seems like the average delay time across months has a tendency to increase from January to June and peaks at the end of July/the beginning of August, then it starts to decrease but it reaches to another small peak again at the end of the year.<br />
+Across years, it seems like there might be differences on delayed time due to late aircraft, we are then curious about the significance of its difference between 2012 and 2016. Thus, we are going to utilize t-test to determine.</p>
+</div>
+<div id="t-test" class="section level3">
+<h3>t-test</h3>
+<p><strong>Comment:</strong> From the side-by-side boxplot, it can be seen that the spread of the boxes are close for data in 2012 and 2016, indicating that the cariances are about the same. So equal vaiance assumption can be considered true for the following test.<br />
+From the basic statistics, it also can be seen that the average late aircraft delay time in 2016 is only a little bit longer than that in 2012. We make formal hypotheses as below: Null hypothesis: the mean time delayed caused by late aircraft in 2012 is not different from that in 2016 Alternative hypothesis: the mean time delayed caused by late aircraft in 2012 is different from that in 2016.<br />
+Since the p-value of the t test is 0.3588 which is greater than 0.05, there is no enough evidence to reject the null hypothesis. The mean time delayed caused by late aircraft do not have much difference between 2012 and 2016.</p>
+</div>
 <div id="day-of-month-view-average-delay" class="section level3">
 <h3>Day of Month View: Average delay</h3>
-<p><strong>Comment:</strong> Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years’ of delay data (in minutes) stratified by day of the month. (30 days, 30 data points per month).<br />
+<p>Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years’ of delay data (in minutes) stratified by day of the month. (30 days, 30 data points per month).<br />
 * August 8th and 9th have the respective longest and second longest delay time of the entire year. * December 17th has the longest delay in December. * November 17th and 21th have equally longest delay. * Delay minutes increase from May to August, and decrease from August to November. December does not follow this trend, demonstrating instead longer delays than in November. Delay minutes are relatively stable through January to April. * Delay minutes are longer in summer (peak in August) than in winter. * It can be speculated that the December peak is due to the winter holiday season, and the November peak is likley due to the Thanksgiving holidays.</p>
 </div>
 <div id="weekly-view-delay-minutes-of-different-causes" class="section level3">
@@ -214,7 +225,7 @@ $(document).ready(function () {
 </div>
 <div id="h-view-proportion-of-delay-delay-time-in-minute" class="section level3">
 <h3>24H View: Proportion of Delay &amp; Delay Time in Minute</h3>
-<p><strong>Comment:</strong> The graph shows what proportion of each hour of flight departure time is delayed. 5 years’ of delay data is stratified by hour of the day. Each data point represents the time interval of 0-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are.</p>
+<p>The graph shows what proportion of each hour of flight departure time is delayed. 5 years’ of delay data is stratified by hour of the day. Each data point represents the time interval of 0-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are.</p>
 <ul>
 <li>From 00:00 to 03:59, the delay proportion is pretty high, around 0.5, and these delays are also the longest of the entire day (00:00-24:00), around 150min.</li>
 <li>The delay proportion decreases dramatically from 04:00. However, the delay minutes are relatively long from 04:00 to 04:59 compared to the following hours.</li>
