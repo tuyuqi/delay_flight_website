@@ -1,13 +1,19 @@
-name: "Yay internet!"
+name: "Delay Flight"
 output_dir: "."
 navbar:
-  title: "Home"
+  title: "Delay Flight"
   right:
-    - text: "About"
-      href: about.html
-    - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
-    - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+    - text: "Project Information"
+      href: 
+    - text: "Data and Approaches"
+      href: 
+    - text: "Major Causes of Flight Delay"
+      href: 
+    - text: "Time Pattern of Flight Delay"
+      href:
+    - text: "The Average Delay Time per Delayed Flights of the U.S. Domestic Airlines Code"
+      href:    
+    - text: "Contact Us"
+      href: 
 output:
   html_document

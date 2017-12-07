@@ -1,6 +1,0 @@
----
-title: "delay_flight_webiste"
-author: "Yuqi Tu, Jiaqi Li, Xin Yin"
-output: html_document
----
-
