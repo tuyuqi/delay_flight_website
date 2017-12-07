@@ -1,5 +1,35 @@
 ---
-title: "project information"
+title: "Project Information"
 output: html_document
 ---
+<style type="text/css">
 
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+h1.title {
+  font-size: 30px;
+  color: DarkBlue;
+}
+h1 { /* Header 1 */
+  font-size: 20px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 20px;
+  color: DarkBlue;
+}
+
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+
+## Introduction & Motivation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nowadays, airline travel has become a mainstream of transportation. Fueled by a tremendous demand in business and travel, there is no doubt that, flight delays or cancellations are frustrating for any air travelers and costly to airlines and passengers (Ball et al., 2010). In the past ten years, among the 12 biggest U.S. airlines (e.g. United Airlines, American Airlines, etc), more than 20% of the commercial flights delay. Punctuality is an issue for all major carriers. \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; There are many factors in reality that allow us to gauge the likelihood and pattern of a flight being delayed.  The aim of this project is to use relatively large historical datasets from 2012 to 2016, to explore factors and patterns associating with U.S. domestic flight delays and to compare them through different perspectives.
