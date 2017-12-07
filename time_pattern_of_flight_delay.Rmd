@@ -6,7 +6,7 @@ output: html_document
 
 ### Day of Month View: Average delay
 
-**Comment:** Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years' of delay data (in minutes) stratified by day of the month.  (30 days, 30 data points per month). \
+Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years' of delay data (in minutes) stratified by day of the month.  (30 days, 30 data points per month). \
 
 * August 8th and 9th have the respective longest and second longest delay time of the entire year. 
 * December 17th has the longest delay in December.
@@ -27,7 +27,7 @@ Each bar represents the average of 5 years' of delay data stratified by day of t
 
 ### 24H View: Proportion of Delay & Delay Time in Minute
 
-**Comment:** The graph shows what proportion of each hour of flight departure time is delayed. 5 years' of delay data is stratified by hour of the day. Each data point represents the time interval of 0-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are. 
+The graph shows what proportion of each hour of flight departure time is delayed. 5 years' of delay data is stratified by hour of the day. Each data point represents the time interval of 0-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are. 
 
 * From 00:00 to 03:59, the delay proportion is pretty high, around 0.5, and these delays are also the longest of the entire day (00:00-24:00), around 150min. 
 * The delay proportion decreases dramatically from 04:00. However, the delay minutes are relatively long from 04:00 to 04:59 compared to the following hours. 
