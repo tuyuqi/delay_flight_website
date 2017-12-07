@@ -1,9 +1,33 @@
 ---
-title: ""
+title: "What are the main causes of delayed flights?"
 output: html_document
 ---
 
-### What are the main causes of delayed flights?
+> **5 major** causes:
+        
+  * Carrier delay
+  * Weather delay 
+  * National System delay 
+  * Security delay 
+  * Late aircraft delay 
+
+
+> **31 combinations** of the major causes of flight delay
+
+  * _TOP 1_: National Aviation System delay
+  * _TOP 2_: Carrier delay & Late aircraft delay
+  * _TOP 3_: Carrier delay 
+  * _TOP 4_: Carrier delay & National Aviation System delay
+  * _TOP 5_: National Aviation System delay & Late aircraft delay
+
+
+***
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Our result parallels with the article, ‘An Answer to Flight Delays?’ by Tracy Samantha. A significant reason for flight delays breakdowns within the National Aviation System (NAS), which includes airports and the air traffic control centers. National Aviaton System delay includes Flow control program, Volume Delays, Airport conditions, Bird strikes, _etc_. Since the NAS delay includes issues of a number of significant and complex factors, when the issues happened, many flights will be affected and might have delay.\
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Also, Carrier delay and Late aircraft delay are major on the delayed flights. Carrier delay includes aircraft cleaning, awaiting gate sapce, engineering inspection, late minute passenger, removal of unruly passenger, _etc_. To avoid these effects, all airport staffs, crews, and passengers have the  responsibility. Late aircraft delay is casued by the same aircraft arrived late which caused the current flight to depart late. The late aircraft delay might also cause more than one delayed flight since the delay might cumulative on the future flights.
+
+***
 
 Causes of Delay                                    | Counts
 ---------------------------------------------------|--------------
@@ -40,17 +64,4 @@ Carrier, Weather,NAS, Security                     | 1
 Weather, NAS, Security, and Late aircraft          | 1
 
 
-> **5 major** causes:
-        
-  * Carrier delay
-  * Weather delay 
-  * National System delay 
-  * Security delay 
-  * Late aircraft delay 
-
-
-> **31 combinations** of the major causes of flight delay
-
-
-how many delayed flight are caused by the combinations of different major causes. Originally, we did not anticipate that NAS delay is the largest cause. After reviewing extra articles, our result parallels with the article, ‘An Answer to Flight Delays?’ by Tracy Samantha. A significant reason for flight delays breakdowns within the National Aviation System (NAS), which includes airports and the air traffic control centers. Since the NAS delay includes issues at the air traffic control centers, the Flow control program, and other significant and complex factors, when the issues happened, a number of flight will be affected and might have delay.
 
