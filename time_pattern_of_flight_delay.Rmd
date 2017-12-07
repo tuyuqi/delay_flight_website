@@ -3,6 +3,22 @@ title: "time_pattern_of_flight_delay_code"
 
 output: html_document
 ---
+### Month of Year View: Average delay
+**Comments:**
+From the graph through 5 years we know that the patterns among 2012-2016 are alike across months and types of delay causes. Each year, it seems like the average delay time across months has a tendency to increase from January to June and peaks at the end of July/the beginning of August, then it starts to decrease but it reaches to another small peak again at the end of the year. \
+
+Across years, it seems like there might be differences on delayed time due to late aircraft, we are then curious about the significance of its difference between 2012 and 2016. Thus, we are going to utilize t-test to determine.
+
+### t-test
+**Comment:**
+From the side-by-side boxplot, it can be seen that the spread of the boxes are close for data in 2012 and 2016, indicating that the cariances are about the same. So equal vaiance assumption can be considered true for the following test.\
+
+From the basic statistics, it also can be seen that the average late aircraft delay time in 2016 is only a little bit longer than that in 2012. We make formal hypotheses as below:
+Null hypothesis: the mean time delayed caused by late aircraft in 2012 is not different from that in 2016
+Alternative hypothesis: the mean time delayed caused by late aircraft in 2012 is different from that in 2016.\
+
+Since the p-value of the t test is 0.3588 which is greater than 0.05, there is no enough evidence to reject the null hypothesis. 
+The mean time delayed caused by late aircraft do not have much difference between 2012 and 2016. 
 
 ### Day of Month View: Average delay
 
