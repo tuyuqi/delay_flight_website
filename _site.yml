@@ -3,17 +3,17 @@ output_dir: "."
 navbar:
   title: "Delay Flight"
   right:
-    - text: "Project Information"
-      href: 
-    - text: "Data and Approaches"
-      href: 
-    - text: "Major Causes of Flight Delay"
-      href: 
-    - text: "Time Pattern of Flight Delay"
-      href:
-    - text: "Airline of Flight Delay"
-      href: 
+    - text: "Project Info"
+      href: project_information.html
+    - text: "Data & Approaches"
+      href: data_and_approaches.html
+    - text: "Major Causes"
+      href: Major_Causes_of_Flight_Delay.html
+    - text: "Time Pattern "
+      href: time_pattern_of_flight_delay.html
+    - text: "Airlines"
+      href: airline_of_Flight_Delay.html
     - text: "Contact Us"
-      href: 
+      href: contact_us.html
 output:
   html_document
