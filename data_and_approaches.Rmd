@@ -1,3 +1,50 @@
 ---
 title: "Data and Approaches"
+output: html_document
 ---
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+h1.title {
+  font-size: 30px;
+  color: DarkBlue;
+}
+h1 { /* Header 1 */
+  font-size: 20px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 20px;
+  color: DarkBlue;
+}
+
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+
+
+
+
+# Data
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The database - "Airline On-Time Performance Data" used comes from Bureau of Transportation Statistics (BTS), which is a U.S. Department that tracks the on-time performance of domestic flights operated by large air carriers and details on the causes of flight delays.
+
+***
+
+# Approaches
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We selected 23 relevant variables and chose time ranges from 2012 Janurary to 2016 December. Our variables of interest fall into three categories based on variable types:`Indicator variables`, `Continuous variables`,`Categorical variables`. What's worth mentioning is that we only regard the flight arrival/departure time exceeding 15 minutes as delay in this project. Out of these variables, we have done statistical analyses on five main causes of delay - `Late Arriving Aircraft Delay(Minutes)`, `Security Delay(Minutes)`, `National Air System Delay(Minutes)`, `Weather Delay(Minutes)`, `Carrier Delay(Minutes)`. The statistical analyses were done
+from different perspectives on delay frequency, time patterns, and hypothesis t test.
+
+
+
+

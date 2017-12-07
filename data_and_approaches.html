@@ -184,9 +184,13 @@ $(document).ready(function () {
   <a href="Major_Causes_of_Flight_Delay.html">Major Causes of Flight Delay</a>
 </li>
 <li class="dropdown-header">Time Pattern of Flight Delay</li>
+<<<<<<< HEAD
 <li>
   <a href="the_average_delay_time_per_delayed_flight_of_US_domestics_flights">Airline of Flight Delay</a>
 </li>
+=======
+<li class="dropdown-header">Airline of Flight Delay</li>
+>>>>>>> 52dd2807c33a50598092e38ec699d1c948e8c551
 <li class="dropdown-header">Contact Us</li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -202,7 +206,42 @@ $(document).ready(function () {
 </div>
 
 
+<style type="text/css">
 
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+h1.title {
+  font-size: 30px;
+  color: DarkBlue;
+}
+h1 { /* Header 1 */
+  font-size: 20px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 20px;
+  color: DarkBlue;
+}
+
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<p>       The database - “Airline On-Time Performance Data” used comes from Bureau of Transportation Statistics (BTS), which is a U.S. Department that tracks the on-time performance of domestic flights operated by large air carriers and details on the causes of flight delays.</p>
+<hr />
+</div>
+<div id="approaches" class="section level1">
+<h1>Approaches</h1>
+<p>       We selected 23 relevant variables and chose time ranges from 2012 Janurary to 2016 December. Our variables of interest fall into three categories based on variable types:<code>Indicator variables</code>, <code>Continuous variables</code>,<code>Categorical variables</code>. What’s worth mentioning is that we only regard the flight arrival/departure time exceeding 15 minutes as delay in this project. Out of these variables, we have done statistical analyses on five main causes of delay - <code>Late Arriving Aircraft Delay(Minutes)</code>, <code>Security Delay(Minutes)</code>, <code>National Air System Delay(Minutes)</code>, <code>Weather Delay(Minutes)</code>, <code>Carrier Delay(Minutes)</code>. The statistical analyses were done from different perspectives on delay frequency, time patterns, and hypothesis t test.</p>
+</div>
 
 
 

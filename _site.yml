@@ -17,4 +17,4 @@ navbar:
       href: 
 output:
   html_document:
-    theme: yeti
+    theme: 
