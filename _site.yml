@@ -12,8 +12,9 @@ navbar:
     - text: "Time Pattern of Flight Delay"
       href:
     - text: "Airline of Flight Delay"
-      href:    
+      href: 
     - text: "Contact Us"
       href: 
 output:
-  html_document
+  html_document:
+    theme: yeti
