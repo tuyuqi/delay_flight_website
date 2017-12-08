@@ -1,6 +1,9 @@
 ---
 title: "What are the main causes of delayed flights?"
-output: html_document
+output: 
+   html_document
+   # code_folding: hide
+
 ---
 
 <style type="text/css">
@@ -33,6 +36,15 @@ pre { /* Code block - determines code spacing between lines */
 
 
 \
+
+
+<img src="count of flight delay" style="width:150%">
+
+
+
+
+\
+
 
  **5 major** causes:
         

@@ -1,6 +1,7 @@
 ---
 title: "Airline Delayed Time"
-output: html_document
+output: 
+   html_document
 ---
 <style type="text/css">
 
@@ -30,6 +31,71 @@ pre { /* Code block - determines code spacing between lines */
 }
 </style>
 
+```{r library, message=FALSE, warning=FALSE, echo=FALSE}
+library(data.table)
+library(janitor)
+library(tidyr)
+library(ggplot2)
+library(plotly)
+library(stringr)
+library(forcats)
+library(tidyverse)
+```
+
+```{r loading_data , message=FALSE, warning=FALSE, echo=FALSE}
+
+load_data = function(path){
+  files = dir(path, pattern = "\\.csv", full.names = TRUE)
+  tables = lapply(files, fread) ## search every csv file in the data folder
+  do.call(rbind, tables)  ## combine 60 csv files by the name of columns using rbind() function
+}
+
+delay_data <- load_data("/srv/data/cumc/flightdelay/delay_data_5yrs") %>% ## When reproduce this project, please change the path to "./delay_data_5yrs"
+  clean_names() %>% 
+  mutate(month, month = factor(month, labels = month.name),  ## change month from number to month.name
+         dep_time = as.character(dep_time),
+         dep_time = substr(dep_time,1,2)) ## condense 1-59 minutes of each hour into one data point, eg., 1:00-1:59 -> 1:00
+  
+         
+```
+
+```{r airline, message=FALSE, warning= FALSE, echo=FALSE}
+general_boxplot = delay_data %>% 
+  filter(arr_del15 == 1) %>% # filter for choosing the flight that delayed 15 mins and above(our criterion for delay flights)
+  select(unique_carrier, carrier_delay, weather_delay, nas_delay, security_delay, late_aircraft_delay) %>% 
+  group_by(unique_carrier) %>%
+   # get the summary data: the mean of delay minutes per delayed flights in different causes. The sum_mean_delay is used for reordering the factors of the following plot.
+  summarize(mean_carrier_delay = mean(carrier_delay[carrier_delay != 0]), 
+            mean_weather_delay = mean(weather_delay[weather_delay != 0]), 
+            mean_nas_delay = mean(nas_delay[nas_delay != 0]), 
+            mean_security_delay = mean(security_delay[security_delay != 0]), 
+            mean_late_aircraft_delay = mean(late_aircraft_delay[late_aircraft_delay!= 0]), 
+            sum_mean_delay = sum(mean_carrier_delay, 
+                                 mean_weather_delay, 
+                                 mean_nas_delay, 
+                                 mean_security_delay, 
+                                 mean_late_aircraft_delay)) %>% 
+  # since some airline do no have the record for security delay, we made it to make the mean of delay minute in security delay is 0. Thus, the security delay minutes of these airlines will not shown the graph below.) 
+  mutate(mean_security_delay = ifelse(is.nan(mean_security_delay), 0, mean_security_delay)) %>% 
+  mutate(unique_carrier = reorder(unique_carrier, sum_mean_delay)) %>% 
+  plot_ly(y = ~unique_carrier, 
+          x = ~mean_carrier_delay, 
+          type = 'bar', 
+          orientation = 'h',
+          name = 'carrier delay', 
+          alpha = 0.8) %>% 
+    add_trace(x = ~mean_weather_delay, name = 'weather delay') %>% 
+    add_trace(x = ~mean_nas_delay, name = 'national aviation system delay') %>% 
+    add_trace(x = ~mean_security_delay, name = 'security delay') %>% 
+    add_trace(x = ~mean_late_aircraft_delay, name = 'late aircraft delay') %>% 
+    layout(title = "Average Delay Minutes (per delayed flights) with Different Causes in Domestic Airlines",
+           yaxis = list(title = "domestic airlines"),
+           xaxis = list(title = "delay minute per delayed flight"), barmode = 'stack')
+general_boxplot
+
+```
+
+\
 
 
 Please note that the airline codes stand for:

@@ -1,8 +1,7 @@
 ---
-title: "Time Pattern of Flight Delay Code"
-output: html_document
-editor_options: 
-  chunk_output_type: inline
+title: "Time Pattern of Flight Delay"
+output: 
+   html_document
 ---
 
 <style type="text/css">
@@ -33,10 +32,84 @@ pre { /* Code block - determines code spacing between lines */
 }
 </style>
 
+
+
+```{r library, message=FALSE, warning=FALSE, echo=FALSE}
+library(data.table)
+library(janitor)
+library(tidyr)
+library(ggplot2)
+library(plotly)
+library(stringr)
+library(forcats)
+library(tidyverse)
+```
+
+```{r loading_data , message=FALSE, warning=FALSE, echo=FALSE}
+
+load_data = function(path){
+  files = dir(path, pattern = "\\.csv", full.names = TRUE)
+  tables = lapply(files, fread) ## search every csv file in the data folder
+  do.call(rbind, tables)  ## combine 60 csv files by the name of columns using rbind() function
+}
+
+delay_data <- load_data("/srv/data/cumc/flightdelay/delay_data_5yrs") %>% ## When reproduce this project, please change the path to "./delay_data_5yrs"
+  clean_names() %>% 
+  mutate(month, month = factor(month, labels = month.name),  ## change month from number to month.name
+         dep_time = as.character(dep_time),
+         dep_time = substr(dep_time,1,2)) 
+  
+         
+```
+
+# Month of Year Delay Pattern
+
+
 \
 
 
-# Month of Year Delay Pattern
+```{r month, message=FALSE, warning=FALSE, echo=FALSE}
+season_pattern <- delay_data %>%
+ select(c(1:5, 10, 11, 13, 14, 18:23)) %>% 
+   filter(arr_del15 == 1)
+
+agg1 = aggregate(carrier_delay ~ year + month, data = season_pattern, mean)
+agg2 = aggregate(weather_delay ~ year + month, data = season_pattern, mean)
+agg3 = aggregate(nas_delay ~ year + month, data = season_pattern, mean)
+agg4 = aggregate(security_delay ~ year + month, data = season_pattern, mean)
+agg5 = aggregate(late_aircraft_delay ~ year + month, data = season_pattern, mean)
+
+agg = cbind(agg1, agg2[,3],  agg3[,3], agg4[,3], agg5[,3]) # Combine the subsets
+
+colnames(agg)[-c(1:3)] = colnames(season_pattern)[12:15] # rename the columns
+
+#combine all the data from 2012-2016
+agg12 = agg[seq(1,56,5),]  
+agg13 =  agg[seq(2,57,5),]
+agg14 = agg[seq(3,58,5),]
+agg15 = agg[seq(4,59,5),]
+agg16 = agg[seq(5,60,5),]
+agg_sum  = rbind(agg12,agg13,agg14,agg15,agg16)
+# head(agg_sum)
+
+#use gather and change it into a long dataset
+agg_sum2 = gather(agg_sum, carrier_delay:late_aircraft_delay, "delay" , -year, -month)
+agg_sum2$month = factor(agg_sum2$month)
+colnames(agg_sum2)[3] = "cause_of_delay"
+plot_1 = ggplot(agg_sum2, aes(month, delay, color = cause_of_delay )) + 
+    geom_line(aes(group = cause_of_delay)) + geom_point() +
+  labs(# title = "Month of Year Delay Pattern",
+       x = "",
+       y = "average delay minute per delayed flight")
+plot_1= plot_1 + facet_wrap(~year, nrow = 5)
+
+ggplotly(plot_1)
+
+  
+```
+
+\
+
 
 
 * 2012-2016 are alike across months and types of delay causes. 
@@ -57,6 +130,25 @@ pre { /* Code block - determines code spacing between lines */
 
 # Day of Month Delay Pattern
 
+```{r day, message=FALSE, warning=FALSE, echo=FALSE}
+month_delay <- delay_data %>% 
+  select(year, month, day_of_month, arr_delay, arr_del15) %>% ## select needed variable for this plot
+  filter(arr_del15 == 1) %>%  ## filter late arrival flights
+  group_by(month, day_of_month) %>% 
+  summarize(mean_delay = (mean(arr_delay))) %>% ## summarize mean of delay (delay minute per flight)
+  ggplot(aes(x = day_of_month, y = mean_delay, color = month)) +
+    geom_point() +
+    geom_line() +
+    labs(# title = "Day of Month Delay Pattern",
+         x = "day of month",
+         y = "average delay minute per delayed flight")
+
+ggplotly(month_delay)
+```
+
+\
+
+
 Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years' of delay data (in minutes) stratified by day of the month.  (30 days, 30 data points per month). \
 This graph is created to highlight possible association between holidays and delay minutes.
 
@@ -70,14 +162,38 @@ This graph is created to highlight possible association between holidays and del
 
 # Weekly Delay Pattern: Delay Minutes of Different Causes
 
+```{r week, message=FALSE, warning=FALSE, echo=FALSE}
+
+week_delay <- delay_data %>% 
+  mutate(day_of_week = factor(day_of_week, labels = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))) %>% ## change day_of_week from number to the name each day of a week
+  select(year, day_of_week, arr_delay, arr_del15, carrier_delay, weather_delay, nas_delay, security_delay, late_aircraft_delay) %>%  ## select needed variable for this plot
+  filter(arr_del15 == 1) %>%  ## filter late arrival flights
+  group_by(day_of_week) %>% 
+  summarize(mean_carrier_delay = mean(carrier_delay), 
+            mean_weather_delay = mean(weather_delay), 
+            mean_nas_delay = mean(nas_delay), 
+            mean_security_delay = mean(security_delay), 
+            mean_late_aircraft_delay = mean(late_aircraft_delay)) %>% ## summarize mean of delay for each cause(delay minute per flight)
+  plot_ly(x = ~day_of_week, y = ~mean_carrier_delay, type = 'bar', name = 'carrier delay', alpha = 0.8) %>% 
+    add_trace(y = ~mean_weather_delay, name = 'weather delay') %>% 
+    add_trace(y = ~mean_nas_delay, name = 'national aviation system delay') %>% 
+    add_trace(y = ~mean_security_delay, name = 'security delay') %>% 
+    add_trace(y = ~mean_late_aircraft_delay, name = 'late aircraft delay') %>% 
+    layout(# title = "Weekly Delay Pattern: Delay Minutes of Different Causes of Delay",
+           yaxis = list(title = "average delay minute per delayed flight"), 
+           barmode = 'stack')
+
+week_delay
+```
+
+\
+
+
 Each bar represents the average of 5 years' of delay data stratified by day of the week. Each bar for day of the week can be broken down into various causes of delay and each corresponding amount of delay due to that reason. 
 
 * **No difference** in total delay minutes across the week.
 * No big difference in each cause of delay across the week, except for security delay.
-
 * From a relative perspective, **security delay** on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.
-
-* From a relative perspective, security delay on weekends is twice as long than on weekdays. However, the absolute difference is pretty minor, only around 0.5 min.
 
 
 \
@@ -85,7 +201,36 @@ Each bar represents the average of 5 years' of delay data stratified by day of t
 
 # 24H Delay Pattern: Proportion of Delay & Delay Time in Minute
 
-The graph shows what proportion of each hour of flight departure time is delayed. 5 years' of delay data is stratified by hour of the day. Each data point represents the time interval of 0-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are. 
+```{r hour, message=FALSE, warning=FALSE, echo=FALSE}
+
+hour_delay = delay_data %>% 
+  select(year, dep_time, arr_delay, arr_del15) %>% 
+  mutate(dep_time = recode(dep_time, "24" = "00")) %>%  ## change 24:00 to 00:00
+  group_by(dep_time) %>%
+  summarize(prop = sum(arr_del15, na.rm = T)/ n(),  ## summarize the proportion of flights delay depends on departure time
+            mean_delay = mean(arr_delay[arr_del15 == 1], ## summarize mean of delay for each hour of a day for delayed flights
+                              na.rm = T)) %>%
+  mutate(text_label = str_c("delay minute:", round(mean_delay, 2), "min")) %>% 
+  plot_ly(x = ~dep_time, 
+          y = ~prop, 
+          type = 'scatter', 
+          mode = 'markers', 
+          size = ~mean_delay, ##buble size = mean_delay
+          sizes = c(10, 60),  ## bubble size range
+          marker = list(opacity = 0.5, sizemode = 'diameter'), 
+          text = ~text_label) %>% 
+  layout(# title = "24H Delay Pattern: Proportion of Delay & Delay Time in Minute",
+         xaxis = list(title = "departure time across 24 Hours"),
+         yaxis = list(title = "delay proportion"))
+
+hour_delay
+  
+```
+
+\
+
+
+The graph shows what proportion of each hour of flight departure time is delayed. 5 years' of delay data is stratified by hour of the day. Each data point represents the time interval of 00-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are. 
 
 
 * From **00:00 to 03:59**, the delay proportion are **highest**, around 0.5, and these delays are also the **longest** of the entire day (00:00-24:00), around 150min. Better not to take flights depart at this time range.
