@@ -3,10 +3,10 @@ output_dir: "."
 navbar:
   title: "Flight Delay"
   right:
-    - text: "Project Information"
+    - text: "Project Info"
       href: project_information.html
       
-    - text: "Data and Approaches"
+    - text: "Data & Methodology"
       href: data_and_approaches.html
       
     - text: "Major Causes"
