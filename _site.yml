@@ -1,7 +1,6 @@
 name: "Flight Delay"
 output_dir: "."
 navbar:
-  title: "Flight Delay"
   right:
     - text: "Project Info"
       href: project_information.html
