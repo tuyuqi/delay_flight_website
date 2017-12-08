@@ -1,7 +1,8 @@
 ---
 title: "Time Pattern of Flight Delay Code"
-
 output: html_document
+editor_options: 
+  chunk_output_type: inline
 ---
 
 <style type="text/css">
@@ -73,11 +74,11 @@ Each bar represents the average of 5 years' of delay data stratified by day of t
 
 * **No difference** in total delay minutes across the week.
 * No big difference in each cause of delay across the week, except for security delay.
-<<<<<<< HEAD
+
 * From a relative perspective, **security delay** on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.
-=======
+
 * From a relative perspective, security delay on weekends is twice as long than on weekdays. However, the absolute difference is pretty minor, only around 0.5 min.
->>>>>>> 0d9930413926d03b8e2231f6bfdcbac060b75725
+
 
 \
 
