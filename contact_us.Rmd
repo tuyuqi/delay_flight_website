@@ -6,25 +6,29 @@ output: html_document
 \
 
 
-### Question?
+
+
+## Yuqi Tu
+
+  [<img src="https://i.imgur.com/O7P4qiW.png">](mailto:<yt2604@cumc.columbia.edu>)     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="https://i.imgur.com/vIETPTj.png">](https://github.com/tuyuqi)
+
+
+
 
 \
 
 
-* Yuqi Tu
-    + yt2604@cumc.columbia.edu
-    + [Github](https://github.com/tuyuqi)
+## Xin Yin 
+
+  [<img src="https://i.imgur.com/O7P4qiW.png">](mailto:<xy2364@cumc.columbia.edu>)     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="https://i.imgur.com/vIETPTj.png">](https://github.com/xy2364)
 
 \
 
 
-* Xin Yin
-    + xy2364@cumc.columbia.edu
-    + [Github](https://github.com/xy2364)
+## Jiaqi Li
 
-\
+  [<img src="https://i.imgur.com/O7P4qiW.png">](mailto:<jl5025@cumc.columbia.edu>) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  [<img src="https://i.imgur.com/vIETPTj.png">](https://github.com/ljq312)
 
-
-* Jiaqi Li
-    + jl5025@cumc.columbia.edu
-    + [Github](https://github.com/ljq312)
