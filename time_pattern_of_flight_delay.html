@@ -180,10 +180,10 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="project_information.html">Project Information</a>
+  <a href="project_information.html">Project Info</a>
 </li>
 <li>
-  <a href="data_and_approaches.html">Data and Approaches</a>
+  <a href="data_and_approaches.html">Data &amp; Methodology</a>
 </li>
 <li>
   <a href="Major_Causes_of_Flight_Delay.html">
@@ -257,57 +257,53 @@ pre { /* Code block - determines code spacing between lines */
 </p>
 <div id="month-of-year-view-average-delay" class="section level1">
 <h1>Month of Year View: Average delay</h1>
-<p><strong>Comments:</strong></p>
 <ul>
 <li>2012-2016 are alike across months and types of delay causes.</li>
-<li>The average delay time across months has a tendency to increase from <span class="math inline">\(January\)</span> to <span class="math inline">\(June\)</span> and peaks at the end of <span class="math inline">\(July\)</span>/the beginning of <span class="math inline">\(August\)</span>, then it starts to decrease but it reaches to another small peak again at the <span class="math inline">\(end\)</span> of the year (Might because of Christmas holiday).<br />
-</li>
-<li>There might be differences on delayed time due to late aircraft across these years, we are then curious about the significance of its difference between 2012 and 2016.</li>
-<li>Next, we are going to utilize t-test to determine this possible difference.</li>
+<li>Delay minutes <strong>increase</strong> from <strong>May to August</strong>, and <strong>decrease</strong> from <strong>August to November</strong>. December does not follow this trend, demonstrating instead longer delays than in November. Delay minutes are relatively stable through January to April.</li>
+<li>Delay minutes are <strong>longer</strong> in <strong>summer</strong> (peak in August) than in winter. This pattern is possibly due to the fact that hotter air gets thin, making it harder to take off and land safely, mostly for smaller jets. (www.phys.org)</li>
+<li>The graph shows a slightly difference on late aircraft delay between years. A t-test is performed to test if the difference is significant between the beginning and the end of this 5 years range. (see following T-test)</li>
 </ul>
 <p><br />
 </p>
 </div>
 <div id="t-test" class="section level1">
 <h1>T-test</h1>
-<p><strong>Comment:</strong></p>
 <ul>
-<li>The p-value of t-test is <strong>0.3588</strong> which is greater than 0.05, which means, with 0.05 significance level, there is no enough evidence to reject that flight delayed by late aircraft is different between 2012 and 2016</li>
+<li>The t-test suggests a non-significant difference on late aircraft delay between the 2012 and 2016 at 5% significance level (95% confidence interval, -3.22 to 1.83; P = 0.3588).</li>
 </ul>
 <p><br />
 </p>
 </div>
-<div id="day-of-month-view-average-delay" class="section level1">
-<h1>Day of Month View: Average delay</h1>
-<p>Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years’ of delay data (in minutes) stratified by day of the month. (30 days, 30 data points per month).</p>
+<div id="day-of-month-delay-pattern-average-delay" class="section level1">
+<h1>Day of Month Delay Pattern: Average delay</h1>
+<p>Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years’ of delay data (in minutes) stratified by day of the month. (30 days, 30 data points per month).<br />
+This graph is created to highlight possible association between holidays and delay minutes.</p>
 <ul>
-<li>August 8th and 9th have the respective longest and second longest delay time of the entire year.<br />
+<li><strong>August 8th and 9th</strong> have the respective <strong>longest</strong> and second longest delay time of the entire year.<br />
 </li>
-<li>December 17th has the longest delay in December.</li>
-<li>November 17th and 21th have equally longest delay.</li>
-<li>Delay minutes increase from May to August, and decrease from August to November. December does not follow this trend, demonstrating instead longer delays than in November. Delay minutes are relatively stable through January to April.</li>
-<li>Delay minutes are longer in summer (peak in August) than in winter.</li>
-<li>It can be speculated that the December peak is due to the winter holiday season, and the November peak is likley due to the Thanksgiving holidays.</li>
+<li><strong>December 17th</strong> has the <strong>longest</strong> delay in December.</li>
+<li><strong>November 17th and 21th</strong> have equally <strong>longes</strong>t delay.</li>
+<li>It can be speculated that the December peak is due to the <strong>winter holiday season</strong>, and the November peak is likley due to the <strong>Thanksgiving holidays</strong>.</li>
 </ul>
 <p><br />
 </p>
 </div>
-<div id="weekly-view-delay-minutes-of-different-causes" class="section level1">
-<h1>Weekly view: Delay Minutes of Different Causes</h1>
+<div id="weekly-delay-pattern-delay-minutes-of-different-causes" class="section level1">
+<h1>Weekly Delay Pattern: Delay Minutes of Different Causes</h1>
 <p>Each bar represents the average of 5 years’ of delay data stratified by day of the week. Each bar for day of the week can be broken down into various causes of delay and each corresponding amount of delay due to that reason.</p>
 <ul>
-<li>No difference in total delay minutes across the week.</li>
+<li><strong>No difference</strong> in total delay minutes across the week.</li>
 <li>No big difference in each cause of delay across the week, except for security delay.</li>
-<li>From a relative perspective, security delay on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.</li>
+<li>From a relative perspective, <strong>security delay</strong> on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.</li>
 </ul>
 <p><br />
 </p>
 </div>
-<div id="h-view-proportion-of-delay-delay-time-in-minute" class="section level1">
-<h1>24H View: Proportion of Delay &amp; Delay Time in Minute</h1>
+<div id="h-delay-pattern-proportion-of-delay-delay-time-in-minute" class="section level1">
+<h1>24H Delay Pattern: Proportion of Delay &amp; Delay Time in Minute</h1>
 <p>The graph shows what proportion of each hour of flight departure time is delayed. 5 years’ of delay data is stratified by hour of the day. Each data point represents the time interval of 0-59 minutes of each hour, condensed into one data point per hour over 24 hours. Bubble size indicates delay minutes. The longer the delay time per delayed flights, the larger the bubbles are.</p>
 <ul>
-<li>From 00:00 to 03:59, the delay proportion is pretty high, around 0.5, and these delays are also the longest of the entire day (00:00-24:00), around 150min.</li>
+<li>From <strong>00:00 to 03:59</strong>, the delay proportion are <strong>highest</strong>, around 0.5, and these delays are also the <strong>longest</strong> of the entire day (00:00-24:00), around 150min. Better not to take flights depart at this time range.</li>
 <li>The delay proportion decreases dramatically from 04:00. However, the delay minutes are relatively long from 04:00 to 04:59 compared to the following hours.</li>
 <li>From 05:00 to 23:59, the delay proportion gradually increases and delay time gradually increases as well.</li>
 </ul>
