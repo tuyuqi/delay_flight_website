@@ -1,7 +1,8 @@
 ---
 title: "Time Pattern of Flight Delay Code"
-
 output: html_document
+editor_options: 
+  chunk_output_type: inline
 ---
 
 <style type="text/css">
@@ -35,7 +36,7 @@ pre { /* Code block - determines code spacing between lines */
 \
 
 
-# Month of Year Delay Pattern
+# Month of Year View: Average delay
 
 
 * 2012-2016 are alike across months and types of delay causes. 
@@ -54,7 +55,7 @@ pre { /* Code block - determines code spacing between lines */
 \
 
 
-# Day of Month Delay Pattern
+# Day of Month Delay Pattern: Average delay
 
 Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years' of delay data (in minutes) stratified by day of the month.  (30 days, 30 data points per month). \
 This graph is created to highlight possible association between holidays and delay minutes.
@@ -77,6 +78,7 @@ Each bar represents the average of 5 years' of delay data stratified by day of t
 * From a relative perspective, **security delay** on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.
 
 * From a relative perspective, security delay on weekends is twice as long than on weekdays. However, the absolute difference is pretty minor, only around 0.5 min.
+
 
 \
 

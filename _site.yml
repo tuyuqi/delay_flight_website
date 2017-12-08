@@ -1,7 +1,6 @@
 name: "Flight Delay"
 output_dir: "."
 navbar:
-  title: "Flight Delay"
   right:
     - text: "Project Info"
       href: project_information.html
@@ -29,12 +28,15 @@ navbar:
       icon: fa-file-text-o
       href: flight_delay.html
     
-    - text: "Video"
-      icon: fa-video-camera
+    - icon: fa-video-camera
       href: contact_us.html
+      
+    - icon: fa-github fa-2x
+      href: https://github.com/tuyuqi/delay_flight_website
       
     - icon: fa-envelope fa-lg
       href: contact_us.html
+      
       
     
 output:
