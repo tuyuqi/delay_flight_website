@@ -1,0 +1,29 @@
+name: "Flight Delay"
+output_dir: "."
+navbar:
+  title: "Flight Delay"
+  right:
+    - text: "Project Information"
+      href: project_information.html
+      
+    - text: "Data and Approaches"
+      href: data_and_approaches.html
+      
+    - text: "Major Causes"
+      icon: fa-bar-chart
+      href: Major_Causes_of_Flight_Delay.html
+      
+    - text: "Time Pattern"
+      icon: fa-bar-chart
+      href: time_pattern_of_flight_delay.html
+      
+    - text: "Airline"
+      icon: fa-bar-chart
+      href: the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html
+      
+    - icon: fa-envelope fa-lg
+      href: contact_us.html
+output:
+  html_document:
+    theme: yeti
+    

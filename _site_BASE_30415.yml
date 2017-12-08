@@ -1,0 +1,19 @@
+name: "Delay Flight"
+output_dir: "."
+navbar:
+  title: "Delay Flight"
+  right:
+    - text: "Project Information"
+      href: 
+    - text: "Data and Approaches"
+      href: 
+    - text: "Major Causes of Flight Delay"
+      href: 
+    - text: "Time Pattern of Flight Delay"
+      href:
+    - text: "Airline of Flight Delay"
+      href: 
+    - text: "Contact Us"
+      href: 
+output:
+  html_document
