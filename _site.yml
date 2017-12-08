@@ -20,9 +20,15 @@ navbar:
     - text: "Airline"
       icon: fa-bar-chart
       href: the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html
+    
+    - text: "Reference"
+      icon: fa-quote-left
+      href: the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html
       
     - icon: fa-envelope fa-lg
       href: contact_us.html
+      
+    
 output:
   html_document:
     theme: yeti

@@ -76,7 +76,7 @@ Each bar represents the average of 5 years' of delay data stratified by day of t
 
 * No difference in total delay minutes across the week.
 * No big difference in each cause of delay across the week, except for security delay.
-* From a relative perspective, security delay on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.
+* From a relative perspective, security delay on weekends is twice as long than on weekdays. However, the absolute difference is pretty minor, only around 0.5 min.
 
 \
 
