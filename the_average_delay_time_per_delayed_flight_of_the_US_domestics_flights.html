@@ -207,20 +207,17 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
+  <a href="the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html">
+    <span class="fa fa-quote-left"></span>
+     
+    Reference
+  </a>
+</li>
+<li>
   <a href="contact_us.html">
     <span class="fa fa-envelope fa-lg"></span>
      
   </a>
-</li>
-<li class="dropdown-header">Citation</li>
-<li>
-  <a>
-    <span class="fa fa-quote-left"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html"></a>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -236,6 +233,33 @@ $(document).ready(function () {
 </div>
 
 
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+h1.title {
+  font-size: 30px;
+  color: DarkBlue;
+}
+h1 { /* Header 1 */
+  font-size: 28px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 16px;
+  color: DarkBlue;
+}
+
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
 <p>Please note that the airline codes stand for:</p>
 <ul>
 <li><code>FL</code> = AirTran Airways Corporation</li>
@@ -259,28 +283,71 @@ $(document).ready(function () {
 <hr />
 <p><img src="delta.png" style="width:45%"></p>
 <p><br />
-<strong>Delta Air Lines</strong> has the highest average delay minutes per flight among the delayed flights (average delay 200.4493 minutes per delayed flight in the sum of all causes). Mesa Airlines, ExpressJet Airlines Inc., SkyWest Airlines Inc., and Endeavor Air Inc. also have a high average of delay minutes per flight among the delayed flights. It might be caused by some outliers that have extremely large delay minutes and the reason needs to be further investigated. This piece of new showing that “A Delta Flight Was Delayed for 2 Hours Because a Pilot and Flight Attendant Had an Argument” might show a possible example of the outliers. (<em>www.Fortune.com</em>).</p>
+</p>
+<div id="total-average-delay-minutes" class="section level1">
+<h1>Total average delay minutes</h1>
+<ul>
+<li><p><strong>Delta Air Lines</strong> has the <strong>longest</strong> average delay minutes per flight among the delayed flights (average delay 200.4493 minutes per delayed flight in the sum of all causes).</p></li>
+<li><p>Mesa Airlines, ExpressJet Airlines Inc., SkyWest Airlines Inc., and Endeavor Air Inc. also have a high average of delay minutes per flight among the delayed flights.</p></li>
+<li><p>These high average delay time might be caused by some outliers that have extremely large delay minutes and the reason needs to be further investigated. For example, a piece of new showing that “A Delta Flight Was Delayed for 2 Hours Because a Pilot and Flight Attendant Had an Argument” might show a possible example of the outliers. (<em>www.Fortune.com</em>).</p></li>
+</ul>
 <p> </p>
-<p><strong>Security delay</strong> affects largely on <strong>Delta Air Lines</strong>. The average delay minutes per delayed flights of Delta Air Lines, caused by security delay, is almost twice of that of other airlines, such as American Airlines, and United Air Lines. Also, <em>AirTran Airways Corporation</em> and <em>Frontier Airlines Inc.</em> do not have security delay on the graph, nor the dataset. It might be true that these two airlines barely experience delay due to security within the five years. However, it might not be ideal in the real world. One possible explanation could be that the data might be not recorded in the dataset.</p>
+</div>
+<div id="average-security-delay" class="section level1">
+<h1>Average Security delay</h1>
+<ul>
+<li><p><strong>Delta Air Lines</strong> is affected <strong>largely</strong> on average security delay.</p></li>
+<li><p>The average delay minutes per delayed flights of Delta Air Lines, caused by security delay, is almost twice of that of other airlines, such as American Airlines, and United Air Lines.</p></li>
+<li><p><em>AirTran Airways Corporation</em> and <em>Frontier Airlines Inc.</em> do not have security delay on the graph, nor the dataset. It might be true that these two airlines barely experience delay due to security within the five years. However, it might not be ideal in the real world. One possible explanation could be that the data might be not recorded in the dataset.</p></li>
+</ul>
 <p><br />
 <img src="Virgin_america.jpg" style="width:45%"></p>
 <p><br />
-<strong>National Aviation System delay</strong> affects largely on <strong>Virgin America</strong>. The average delay minutes per delayed flights of Delta Air Lines, caused by NAS delay, is almost twice of that of other airlines, such as Alaska Airlines, and SkyWest Airlines.</p>
+</p>
+</div>
+<div id="average-national-aviation-system-delay" class="section level1">
+<h1>Average National Aviation System delay</h1>
+<ul>
+<li><p><strong>Virgin America</strong> is affected <strong>largely</strong> on average National Aviation System delay.</p></li>
+<li><p>The average delay minutes per delayed flights of Virgin America, caused by NAS delay, is almost twice of that of other airlines, such as Alaska Airlines, and SkyWest Airlines.</p></li>
+</ul>
 <p><br />
 </p>
-<p><strong>Weather delay</strong> affects the airlines almost evenly. Most of the average delay minutes per delayed flights of different airlines, casued by weather delay, is around 40 minutes. However, <em>Virgin America</em> shows the lowest delay minutes (under 20 minutes) per delayed flight.</p>
+</div>
+<div id="average-weather-delay" class="section level1">
+<h1>Average weather delay</h1>
+<ul>
+<li><p>Weather delay affects the airlines almost evenly.</p></li>
+<li><p>Most of the average delay minutes per delayed flights of different airlines, casued by weather delay, is around 40 minutes.</p></li>
+<li><p>However, <em>Virgin America</em> shows the lowest delay minutes (under 20 minutes) per delayed flight.</p></li>
+</ul>
 <p><br />
 <img src="mesa_airline.jpg" style="width:45%"></p>
 <p><br />
-<strong>Carrier delay</strong> affects largely on <strong>Mesa Airlines</strong>. Among these 17 airlines, their average delay minutes per delayed flights caused by carrier delay mainly fluctuates between 20 minutes to 45 minutes.</p>
+</p>
+</div>
+<div id="average-carrier-delay" class="section level1">
+<h1>Average carrier delay</h1>
+<ul>
+<li><p><strong>Mesa Airlines</strong> is affected <strong>largely</strong> on average carrier delay .</p></li>
+<li><p>The average delay minutes per delayed flights caused by carrier delay mainly fluctuates between 20 minutes to 45 minutes.</p></li>
+</ul>
 <p><br />
-<strong>Late aircraft delay</strong> affects the airlines almost evenly around 40 minutes.However, <em>Hawaiian Airlines</em> shows the lowest delay minutes (under 30 minutes) per delayed flight.</p>
+</p>
+</div>
+<div id="average-late-aircraft-delay" class="section level1">
+<h1>Average late aircraft delay</h1>
+<ul>
+<li><p>Late aircraft delay affects the airlines almost evenly around 40 minutes</p></li>
+<li><p>However, <em>Hawaiian Airlines</em> shows the lowest delay minutes (under 30 minutes) per delayed flight.</p></li>
+</ul>
 <hr />
 <ul>
 <li><a href="https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap" class="uri">https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap</a></li>
 <li><a href="http://abcnews.go.com/topics/business/airlines/virgin-america.htm?mediatype=Image" class="uri">http://abcnews.go.com/topics/business/airlines/virgin-america.htm?mediatype=Image</a></li>
 <li><a href="https://www.flickr.com/photos/david_atkinson/5966106056" class="uri">https://www.flickr.com/photos/david_atkinson/5966106056</a></li>
 </ul>
+</div>
 
 
 
