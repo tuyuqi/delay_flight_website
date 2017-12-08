@@ -1,7 +1,4 @@
 ---
-title: ''
-author: "Xin Yin"
-date: "12/7/2017"
 output: html_document
 ---
 
@@ -38,4 +35,36 @@ pre { /* Code block - determines code spacing between lines */
 
 # Reference
 
+* Ball, Michael, Cynthia Barnhart, Martin Dresner, Mark Hansen, Kevin Neels, Amedeo Odoni, Everett Peterson, Lance Sherry, Antonio Trani,        and Bo Zou. Total Delay Impact Study: A Comprehensive Assessment of the Costs and Impacts of Flight Delay in the United States. Berkeley, Calif.: Institute of Transportation Studies, University of California, Berkeley, 2010. Internet resource.
 
+* Bennett, J. (2017, November 14). The 12 Biggest U.S. Airlines Ranked by Percentage of Delayed Flights.
+      Retrieved from http://webcache.googleusercontent.com/search?q=cache%3A8VgN4tzU0jsJ%3Awww.ppularmechanics.com%2Fflight%2Fg2303%2Fairlines-with-most-delays%2F%2B&cd=1&hl=en&ct=clnk&gl=us
+
+* Borenstein, S., & Koenig, D. (n.d.). Science Says: Why some airplanes don’t fly in high heat.
+      Retrieved December 06, 2017, from https://phys.org/news/2017-06-science-airplanes-dont-high.html
+
+* Bureau of Transportation Statistics. TranStats Database. http://www.transtats.bts.gov/
+
+* Delta Air Lines: Imperfectly Cheap
+Stone Fox Capital Long/short equity, growth at reasonable price, research analyst, Deep ValueStone Fox Capital.cls-1{fill:#024999;} - https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap
+
+* Here are the 3 most common reasons why your flight is delayed
+      Benjamin Zhang - http://www.businessinsider.com/why-your-flight-delayed-2016-12
+
+* HOPEWELL, D. (2017, November 14). Best and Worst Airlines for Flight Delays.
+      Retrieved from http://www.travelandleisure.com/slideshows/best-and-worst-airlines-for-delays-2014#no 14-frontier
+
+* Mesa Airlines Beech 1900D N3YV
+David Atkinson - https://www.flickr.com/photos/david_atkinson/5966106056
+
+* Reilly , (n.d.). A Delta Flight Was Delayed for 2 Hours Because a Pilot and Flight Attendant Had an Argument.
+      Retrieved from http://fortune.com/2017/07/25/delta-flight-delay-pilot-argument/
+
+* Reuters , J. (n.d.). Delta Passengers react to Flight Delays Due to Power Outage | Money.
+       Retrieved from http://time.com/money/4443670/delta-passengers-flight-delays/
+
+* Schmidt/Washington, T. S. (2007, August 15). An Answer to Flight Delays?
+      Retrieved December 06, 2017, from http://content.time.com/time/nation/article/0,8599,1653304,00.html
+
+* The 12 Biggest U.S. Airlines Ranked by Percentage of Delayed Flights
+      Jay Bennett - http://www.popularmechanics.com/flight/g2303/airlines-with-most-delays/
