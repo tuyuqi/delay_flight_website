@@ -35,7 +35,7 @@ pre { /* Code block - determines code spacing between lines */
 \
 
 
-# Month of Year View: Average delay
+# Month of Year Delay Pattern
 
 
 * 2012-2016 are alike across months and types of delay causes. 
@@ -54,7 +54,7 @@ pre { /* Code block - determines code spacing between lines */
 \
 
 
-# Day of Month Delay Pattern: Average delay
+# Day of Month Delay Pattern
 
 Each trendline represents a month of the year, and each data point on the corresponding trendline represents the average of 5 years' of delay data (in minutes) stratified by day of the month.  (30 days, 30 data points per month). \
 This graph is created to highlight possible association between holidays and delay minutes.
@@ -73,11 +73,10 @@ Each bar represents the average of 5 years' of delay data stratified by day of t
 
 * **No difference** in total delay minutes across the week.
 * No big difference in each cause of delay across the week, except for security delay.
-<<<<<<< HEAD
+
 * From a relative perspective, **security delay** on weekends is twice as long than on weekdays. However the absolute difference is pretty minor, only around 0.5 min.
-=======
+
 * From a relative perspective, security delay on weekends is twice as long than on weekdays. However, the absolute difference is pretty minor, only around 0.5 min.
->>>>>>> 0d9930413926d03b8e2231f6bfdcbac060b75725
 
 \
 
