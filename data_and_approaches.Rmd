@@ -3,6 +3,7 @@ title: "Data and Approaches"
 output: html_document
 ---
 
+
 <style type="text/css">
 
 body{ /* Normal  */
@@ -14,11 +15,11 @@ h1.title {
   color: DarkBlue;
 }
 h1 { /* Header 1 */
-  font-size: 20px;
+  font-size: 28px;
   color: DarkBlue;
 }
 h2 { /* Header 2 */
-    font-size: 20px;
+    font-size: 16px;
   color: DarkBlue;
 }
 
@@ -32,20 +33,21 @@ pre { /* Code block - determines code spacing between lines */
 </style>
 
 
+\
 
 
 # Data
 
-### Source
+## Source
 We used database "Airline On-Time Performance Data" coming from Bureau of Transportation Statistics (BTS), which has records of the on-time performance of domestic flights operated by large air carriers. The database is accessed from [here](https://www.transtats.bts.gov/Fields.asp?Table_ID=236). 
 
-### Overview
+## Overview
 We selected 23 out of 109 variables of our interest, and chose time ranges from 2012 Janurary to 2016 December. In total, there are 29722792 observations of 23 variables in our dataset. Each observation represent one flight. Variables fall into three categories based on variable types: _Indicator variables_, _Continuous variables_, _Categorical variables_,  including summary information on the flights performance and descriptive information about flights.
 
-### Definition of flight delay
+## Definition of flight delay
 A flight is counted as "delayed" if it arrived 15min later than schedule arrival. 
 
-### 5 Causes of delay
+## 5 Causes of delay
 
 * Carrier Delay: including Aircraft cleaning, Maintenance, Late crew, _etc._
 * Weather Delay: including Below minimum conditions, Thunder Storm, Tornado _etc._

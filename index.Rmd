@@ -1,7 +1,7 @@
 ---
-title: "Holy cow!"
 ---
+\
 
-### I have a webpage!
+\
 
-And I can put all kinds of stuff on it!
+<img src="flight-information-board-with-canceled-flights.jpg" style="width:100%; height:450px">

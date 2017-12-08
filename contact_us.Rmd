@@ -1,6 +1,30 @@
 ---
-title: "contact_us"
+title: "Contact Us"
 output: html_document
 ---
 
+\
 
+
+### Question?
+
+\
+
+
+* Yuqi Tu
+    + yt2604@cumc.columbia.edu
+    + [Github](https://github.com/tuyuqi)
+
+\
+
+
+* Xin Yin
+    + xy2364@cumc.columbia.edu
+    + [Github](https://github.com/xy2364)
+
+\
+
+
+* Jiaqi Li
+    + jl5025@cumc.columbia.edu
+    + [Github](https://github.com/ljq312)

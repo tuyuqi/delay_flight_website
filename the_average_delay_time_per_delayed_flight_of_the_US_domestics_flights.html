@@ -15,13 +15,14 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -97,34 +98,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 51px;
+  padding-top: 45px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 
 .section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 </style>
 
@@ -171,19 +172,46 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Delay Flight</a>
+      <a class="navbar-brand" href="index.html">Flight Delay</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown-header">Project Information</li>
-<li class="dropdown-header">Data and Approaches</li>
-<li class="dropdown-header">Major Causes of Flight Delay</li>
-<li class="dropdown-header">Time Pattern of Flight Delay</li>
-<li class="dropdown-header">Airline of Flight Delay</li>
-<li class="dropdown-header">Contact Us</li>
+        <li>
+  <a href="project_information.html">Project Information</a>
+</li>
+<li>
+  <a href="data_and_approaches.html">Data and Approaches</a>
+</li>
+<li>
+  <a href="Major_Causes_of_Flight_Delay.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Major Causes
+  </a>
+</li>
+<li>
+  <a href="time_pattern_of_flight_delay.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Time Pattern
+  </a>
+</li>
+<li>
+  <a href="the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Airline
+  </a>
+</li>
+<li>
+  <a href="contact_us.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -220,26 +248,22 @@ $(document).ready(function () {
 </ul>
 <hr />
 <p><img src="delta.png" style="width:45%"></p>
-<blockquote>
-<p><strong>Delta Air Lines</strong> has the highest average delay minutes per flight among the delayed flights (average delay 200.4493 minutes per delayed flight in the sum of all causes). Mesa Airlines, ExpressJet Airlines Inc., SkyWest Airlines Inc., and Endeavor Air Inc. also have high average of delay minutes per flight among the delayed flights. It might be caused by some outliers that has extremely large delay minutes and the reason is needed to be further investigate. This piece of new showing that “A Delta Flight Was Delayed for 2 Hours Because a Pilot and Flight Attendant Had an Argument” might show a possible example of the outliers. (www.Fortune.com).</p>
-</blockquote>
-<blockquote>
+<p><br />
+<strong>Delta Air Lines</strong> has the highest average delay minutes per flight among the delayed flights (average delay 200.4493 minutes per delayed flight in the sum of all causes). Mesa Airlines, ExpressJet Airlines Inc., SkyWest Airlines Inc., and Endeavor Air Inc. also have high average of delay minutes per flight among the delayed flights. It might be caused by some outliers that has extremely large delay minutes and the reason is needed to be further investigate. This piece of new showing that “A Delta Flight Was Delayed for 2 Hours Because a Pilot and Flight Attendant Had an Argument” might show a possible example of the outliers. (<em>www.Fortune.com</em>).</p>
+<p> </p>
 <p><strong>Security delay</strong> affects largely on <strong>Delta Air Lines</strong>. The average delay minutes per delayed flights of Delta Air Lines, caused by security delay, is almost twice of that of other airlines, such as American Airlines, and United Air Lines. Also, <em>AirTran Airways Corporation</em> and <em>Frontier Airlines Inc.</em> do not have security delay on the graph, nor the dataset. It might be the true that these two airline barely experience delay due to security within the five years. However, it might not be ideal in the real world. One possible explanation could be that the data might be not recorded in the dataset.</p>
-</blockquote>
-<p><img src="Virgin_america.jpg" style="width:45%"></p>
-<blockquote>
-<p><strong>National Aviation System delay</strong> affects largely on <strong>Virgin America</strong>. The average delay minutes per delayed flights of Delta Air Lines, casued by NAS delay, is almost twice of that of other airlines, such as Alaska Airlines, and SkyWest Airlines.</p>
-</blockquote>
-<blockquote>
-<p><strong>Weather delay</strong> affects the airlines almost evenly. Most of the average delay minutes per delayed flights of different airlines, casued by weather delay, is around 40 minutes. However, <em>Virgin America</em> shows the lowest delay minutes (under 20 minutes) per delayed flight.</p>
-</blockquote>
-<p><img src="mesa_airline.jpg" style="width:45%"></p>
-<blockquote>
-<p><strong>Carrier delay</strong> affects largely on <strong>Mesa Airlines</strong>. Among these 17 airlines, their average delay minutes per delayed flights caused by carrier delay mainly fluctuates between 20 minutes to 45 minutes.</p>
-</blockquote>
-<blockquote>
-<p><strong>Late aircraft delay</strong> affects the airlines almost evenly around 40 minutes.However, <em>Hawaiian Airlines</em> shows the lowest delay minutes (under 30 minutes) per delayed flight.</p>
-</blockquote>
+<p><br />
+<img src="Virgin_america.jpg" style="width:45%"></p>
+<p><br />
+<strong>National Aviation System delay</strong> affects largely on <strong>Virgin America</strong>. The average delay minutes per delayed flights of Delta Air Lines, casued by NAS delay, is almost twice of that of other airlines, such as Alaska Airlines, and SkyWest Airlines.</p>
+<p><br />
+<strong>Weather delay</strong> affects the airlines almost evenly. Most of the average delay minutes per delayed flights of different airlines, casued by weather delay, is around 40 minutes. However, <em>Virgin America</em> shows the lowest delay minutes (under 20 minutes) per delayed flight.</p>
+<p><br />
+<img src="mesa_airline.jpg" style="width:45%"></p>
+<p><br />
+<strong>Carrier delay</strong> affects largely on <strong>Mesa Airlines</strong>. Among these 17 airlines, their average delay minutes per delayed flights caused by carrier delay mainly fluctuates between 20 minutes to 45 minutes.</p>
+<p><br />
+<strong>Late aircraft delay</strong> affects the airlines almost evenly around 40 minutes.However, <em>Hawaiian Airlines</em> shows the lowest delay minutes (under 30 minutes) per delayed flight.</p>
 <hr />
 <ul>
 <li><a href="https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap" class="uri">https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap</a></li>
