@@ -42,10 +42,10 @@ pre { /* Code block - determines code spacing between lines */
 We used database "Airline On-Time Performance Data" coming from Bureau of Transportation Statistics (BTS), which has records of the on-time performance of domestic flights operated by large air carriers. The database is accessed from [here](https://www.transtats.bts.gov/Fields.asp?Table_ID=236). 
 
 ## Overview
-We selected 23 out of 109 variables of our interest, and chose time ranges from 2012 Janurary to 2016 December. In total, there are 29722792 observations of 23 variables in our dataset. Each observation represent one flight. Variables fall into three categories based on variable types: _Indicator variables_, _Continuous variables_, _Categorical variables_,  including summary information on the flights performance and descriptive information about flights.
+We selected 23 out of 109 variables of our interest, and chose time ranges from 2012 January to 2016 December. In total, there are 29,722,792 observations of 23 variables in our dataset. Each observation represents one flight. Variables fall into three categories based on variable types: _Indicator variables_, _Continuous variables_, _Categorical variables_,  including summary information on the flights performance and descriptive information about the flights.
 
 ## Definition of flight delay
-A flight is counted as "delayed" if it arrived 15min later than schedule arrival. 
+A flight is counted as "delayed" if it arrived 15min later than scheduled arrival. 
 
 ## 5 Causes of delay
 
@@ -60,7 +60,7 @@ A flight is counted as "delayed" if it arrived 15min later than schedule arrival
 
 # Approaches
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We selected 23 relevant variables and chose time ranges from 2012 Janurary to 2016 December. Our variables of interest fall into three categories based on variable types:`Indicator variables`, `Continuous variables`,`Categorical variables`. What's worth mentioning is that we only regard the flight arrival/departure time exceeding 15 minutes as delay in this project. Out of these variables, we have done statistical analyses on five main causes of delay - `Late Arriving Aircraft Delay(Minutes)`, `Security Delay(Minutes)`, `National Air System Delay(Minutes)`, `Weather Delay(Minutes)`, `Carrier Delay(Minutes)`. The statistical analyses were done
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We selected 23 relevant variables and chose time ranges from 2012 January to 2016 December. Our variables of interest fall into three categories based on variable types:`Indicator variables`, `Continuous variables`, `Categorical variables`. What's worth mentioning is that we only regard the flight arrival/departure time exceeding 15 minutes as delay in this project. Out of these variables, we have done statistical analyses on five main causes of delay - `Late Arriving Aircraft Delay(Minutes)`, `Security Delay(Minutes)`, `National Air System Delay(Minutes)`, `Weather Delay(Minutes)`, `Carrier Delay(Minutes)`. The statistical analyses were done
 from different perspectives on delay frequency, time patterns, and hypothesis t test.
 
 

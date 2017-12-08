@@ -6,7 +6,7 @@ navbar:
     - text: "Project Info"
       href: project_information.html
       
-    - text: "Data & Methodology"
+    - text: "Data & Methods"
       href: data_and_approaches.html
       
     - text: "Major Causes"
@@ -20,9 +20,23 @@ navbar:
     - text: "Airline"
       icon: fa-bar-chart
       href: the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html
+    
+    - text: "Reference"
+      icon: fa-quote-left
+      href: Reference.html
+      
+    - text: "Full Report"
+      icon: fa-file-text-o
+      href: flight_delay.html
+    
+    - text: "Video"
+      icon: fa-video-camera
+      href: contact_us.html
       
     - icon: fa-envelope fa-lg
       href: contact_us.html
+      
+    
 output:
   html_document:
     theme: yeti

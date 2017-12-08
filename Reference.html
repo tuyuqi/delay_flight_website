@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Flight Delay</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="project_information.html">Project Info</a>
+</li>
+<li>
+  <a href="data_and_approaches.html">Data &amp; Methods</a>
+</li>
+<li>
+  <a href="Major_Causes_of_Flight_Delay.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Major Causes
+  </a>
+</li>
+<li>
+  <a href="time_pattern_of_flight_delay.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Time Pattern
+  </a>
+</li>
+<li>
+  <a href="the_average_delay_time_per_delayed_flight_of_the_US_domestics_flights.html">
+    <span class="fa fa-bar-chart"></span>
+     
+    Airline
+  </a>
+</li>
+<li>
+  <a href="Reference.html">
+    <span class="fa fa-quote-left"></span>
+     
+    Reference
+  </a>
+</li>
+<li>
+  <a href="flight_delay.html">
+    <span class="fa fa-file-text-o"></span>
+     
+    Full Report
+  </a>
+</li>
+<li>
+  <a href="contact_us.html">
+    <span class="fa fa-video-camera"></span>
+     
+    Video
+  </a>
+</li>
+<li>
+  <a href="contact_us.html">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<style type="text/css">
+
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+h1.title {
+  font-size: 30px;
+  color: DarkBlue;
+}
+h1 { /* Header 1 */
+  font-size: 28px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 16px;
+  color: DarkBlue;
+}
+
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+<p><br />
+</p>
+<div id="reference" class="section level1">
+<h1>Reference</h1>
+<ul>
+<li><p>Ball, Michael, Cynthia Barnhart, Martin Dresner, Mark Hansen, Kevin Neels, Amedeo Odoni, Everett Peterson, Lance Sherry, Antonio Trani, and Bo Zou. Total Delay Impact Study: A Comprehensive Assessment of the Costs and Impacts of Flight Delay in the United States. Berkeley, Calif.: Institute of Transportation Studies, University of California, Berkeley, 2010. Internet resource.</p></li>
+<li><p>Bennett, J. (2017, November 14). The 12 Biggest U.S. Airlines Ranked by Percentage of Delayed Flights. Retrieved from <a href="http://webcache.googleusercontent.com/search?q=cache%3A8VgN4tzU0jsJ%3Awww.ppularmechanics.com%2Fflight%2Fg2303%2Fairlines-with-most-delays%2F%2B&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">http://webcache.googleusercontent.com/search?q=cache%3A8VgN4tzU0jsJ%3Awww.ppularmechanics.com%2Fflight%2Fg2303%2Fairlines-with-most-delays%2F%2B&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us</a></p></li>
+<li><p>Borenstein, S., &amp; Koenig, D. (n.d.). Science Says: Why some airplanes don’t fly in high heat. Retrieved December 06, 2017, from <a href="https://phys.org/news/2017-06-science-airplanes-dont-high.html" class="uri">https://phys.org/news/2017-06-science-airplanes-dont-high.html</a></p></li>
+<li><p>Bureau of Transportation Statistics. TranStats Database. <a href="http://www.transtats.bts.gov/" class="uri">http://www.transtats.bts.gov/</a></p></li>
+<li><p>Delta Air Lines: Imperfectly Cheap Stone Fox Capital Long/short equity, growth at reasonable price, research analyst, Deep ValueStone Fox Capital.cls-1{fill:#024999;} - <a href="https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap" class="uri">https://seekingalpha.com/article/3965849-delta-air-lines-imperfectly-cheap</a></p></li>
+<li><p>Here are the 3 most common reasons why your flight is delayed Benjamin Zhang - <a href="http://www.businessinsider.com/why-your-flight-delayed-2016-12" class="uri">http://www.businessinsider.com/why-your-flight-delayed-2016-12</a></p></li>
+<li><p>HOPEWELL, D. (2017, November 14). Best and Worst Airlines for Flight Delays. Retrieved from <a href="http://www.travelandleisure.com/slideshows/best-and-worst-airlines-for-delays-2014#no" class="uri">http://www.travelandleisure.com/slideshows/best-and-worst-airlines-for-delays-2014#no</a> 14-frontier</p></li>
+<li><p>Mesa Airlines Beech 1900D N3YV David Atkinson - <a href="https://www.flickr.com/photos/david_atkinson/5966106056" class="uri">https://www.flickr.com/photos/david_atkinson/5966106056</a></p></li>
+<li><p>Reilly , (n.d.). A Delta Flight Was Delayed for 2 Hours Because a Pilot and Flight Attendant Had an Argument. Retrieved from <a href="http://fortune.com/2017/07/25/delta-flight-delay-pilot-argument/" class="uri">http://fortune.com/2017/07/25/delta-flight-delay-pilot-argument/</a></p></li>
+<li><p>Reuters , J. (n.d.). Delta Passengers react to Flight Delays Due to Power Outage | Money. Retrieved from <a href="http://time.com/money/4443670/delta-passengers-flight-delays/" class="uri">http://time.com/money/4443670/delta-passengers-flight-delays/</a></p></li>
+<li><p>Schmidt/Washington, T. S. (2007, August 15). An Answer to Flight Delays? Retrieved December 06, 2017, from <a href="http://content.time.com/time/nation/article/0,8599,1653304,00.html" class="uri">http://content.time.com/time/nation/article/0,8599,1653304,00.html</a></p></li>
+<li><p>The 12 Biggest U.S. Airlines Ranked by Percentage of Delayed Flights Jay Bennett - <a href="http://www.popularmechanics.com/flight/g2303/airlines-with-most-delays/" class="uri">http://www.popularmechanics.com/flight/g2303/airlines-with-most-delays/</a></p></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
